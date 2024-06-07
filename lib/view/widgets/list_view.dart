@@ -1,9 +1,14 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_finance_app_ui_animation/model/contact.dart';
 import 'package:flutter_finance_app_ui_animation/view_model/animations/fade_animation.dart';
 
+/// A widget that displays a horizontally scrolling list of contacts with fade-in animations.
+///
+/// The [ListViewWidget] is a stateful widget that uses a [ListView.separated] to
+/// display a list of [Contact] objects. Each item in the list fades in from the
+/// left-to-right direction. The background color of each item is chosen randomly
+/// from a predefined list of colors.
 class ListViewWidget extends StatefulWidget {
   ListViewWidget({super.key});
 
@@ -12,7 +17,7 @@ class ListViewWidget extends StatefulWidget {
 }
 
 class _ListViewWidgetState extends State<ListViewWidget> {
-  List colours = [
+  List<Color> colours = [
     Colors.red.shade200,
     Colors.green.shade200,
     Colors.yellow.shade200
@@ -22,13 +27,14 @@ class _ListViewWidgetState extends State<ListViewWidget> {
 
   int index = 0;
 
+  /// Changes the background color of the list items randomly.
   void changeColour() {
     setState(() {
       index = random.nextInt(3);
     });
   }
 
-  final contactsList = [
+  final List<Contact> contactsList = [
     Contact(
       color: Colors.red.withOpacity(0.1),
       name: 'Toya Smith',
@@ -78,7 +84,8 @@ class _ListViewWidgetState extends State<ListViewWidget> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
-      height: height * 0.22, // Provide a definite height for the ListView
+      // Set a definite height for the ListView
+      height: height * 0.22,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: contactsList.length,
@@ -90,7 +97,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
             fadeOffset: 40,
             child: Container(
               height: height * 0.2,
-              width: width * 0.4, // Provide a definite width for each item
+              width: width * 0.4, // Set a definite width for each item
               padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 15),
               decoration: BoxDecoration(
                 color: colours[index],

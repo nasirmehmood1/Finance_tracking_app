@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+/// Enumeration to define the direction of the fade-in animation.
 enum FadeInDirection { ltr, rtl, ttb, btt }
 
+/// A widget that applies a fade and translation animation to its child.
+///
+/// The [FadeAnimation] widget takes a [child] widget and animates its opacity
+/// and position from an offset to its original position. The direction and
+/// magnitude of the offset are controlled by the [fadeInDirection] and [fadeOffset]
+/// properties. The [delay] property specifies the duration of the animation.
 class FadeAnimation extends StatefulWidget {
   final Widget child;
   final double delay;
@@ -30,11 +37,14 @@ class _FadeAnimationState extends State<FadeAnimation>
   @override
   void initState() {
     super.initState();
+
+    // Initialize the animation controller with a duration based on the delay property.
     animationController = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: (500 * widget.delay).round()),
     );
 
+    // Initialize the translation animation based on the fadeOffset property.
     inAnimation = Tween<double>(begin: -widget.fadeOffset, end: 0)
         .animate(animationController)
       ..addListener(
@@ -43,6 +53,7 @@ class _FadeAnimationState extends State<FadeAnimation>
         },
       );
 
+    // Initialize the opacity animation from transparent to fully opaque.
     opacityAnimation =
         Tween<double>(begin: 0, end: 1).animate(animationController)
           ..addListener(
@@ -51,6 +62,7 @@ class _FadeAnimationState extends State<FadeAnimation>
             },
           );
 
+    // Start the animations.
     animationController.forward();
   }
 
