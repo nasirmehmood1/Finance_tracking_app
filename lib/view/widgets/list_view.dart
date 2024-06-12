@@ -20,7 +20,12 @@ class _ListViewWidgetState extends State<ListViewWidget> {
   List<Color> colours = [
     Colors.red.shade200,
     Colors.green.shade200,
-    Colors.yellow.shade200
+    Colors.yellow.shade200,
+    Colors.deepOrange.shade200,
+    Colors.grey.shade200,
+    Colors.pink.shade200,
+    Colors.purple.shade200,
+    Colors.teal.shade200
   ];
 
   Random random = Random();
@@ -39,37 +44,37 @@ class _ListViewWidgetState extends State<ListViewWidget> {
       color: Colors.red.withOpacity(0.1),
       name: 'Toya Smith',
       amount: '50.60',
-      profileAsset: 'assets/images/nasir.jpeg',
+      profileAsset: 'assets/images/p1.jpg',
     ),
     Contact(
       color: Colors.teal.withOpacity(0.1),
       name: 'Tom Hardy',
       amount: '80.20',
-      profileAsset: 'assets/images/nasir.jpeg',
+      profileAsset: 'assets/images/p2.jpg',
     ),
     Contact(
       color: Colors.purple.withOpacity(0.1),
       name: 'John Wick',
       amount: '200.90',
-      profileAsset: 'assets/images/nasir.jpeg',
+      profileAsset: 'assets/images/p3.jpeg',
     ),
     Contact(
       color: Colors.orange.withOpacity(0.1),
       name: 'Brad Smith',
       amount: '60.70',
-      profileAsset: 'assets/images/nasir.jpeg',
+      profileAsset: 'assets/images/p4.jpeg',
     ),
     Contact(
       color: Colors.orange.withOpacity(0.1),
       name: 'Brad Smith',
       amount: '60.70',
-      profileAsset: 'assets/images/nasir.jpeg',
+      profileAsset: 'assets/images/p1.jpg',
     ),
     Contact(
       color: Colors.orange.withOpacity(0.1),
       name: 'Brad Smith',
       amount: '60.70',
-      profileAsset: 'assets/images/nasir.jpeg',
+      profileAsset: 'assets/images/p2.jpg',
     ),
     Contact(
       color: Colors.orange.withOpacity(0.1),

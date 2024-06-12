@@ -28,8 +28,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar:
-            const BottomNavCustom(), // Custom bottom navigation bar.
         body: SizedBox(
           width: width,
           height: height,
