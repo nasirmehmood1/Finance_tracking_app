@@ -1,6 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_finance_app_ui_animation/view/widgets/bank_card.dart';
+import 'package:flutter_finance_app_ui_animation/view/home_screen/widgets/bank_card.dart';
 
 /// A widget that displays a swiper with bank cards.
 ///

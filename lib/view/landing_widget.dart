@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_finance_app_ui_animation/view/home.dart';
+import 'package:flutter_finance_app_ui_animation/view/home_screen/home.dart';
 import 'package:flutter_finance_app_ui_animation/view/statistics_screen/statistics_screen.dart';
 import 'package:flutter_finance_app_ui_animation/view/wallet_screen/wallet_screen.dart';
 

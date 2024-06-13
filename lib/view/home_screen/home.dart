@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_finance_app_ui_animation/view/widgets/bottom_nav_custom.dart';
-import 'package:flutter_finance_app_ui_animation/view/widgets/home_button.dart';
-import 'package:flutter_finance_app_ui_animation/view/widgets/list_view.dart';
-import 'package:flutter_finance_app_ui_animation/view/widgets/swiper.dart';
+import 'package:flutter_finance_app_ui_animation/view/home_screen/widgets/bottom_nav_custom.dart';
+import 'package:flutter_finance_app_ui_animation/view/home_screen/widgets/home_button.dart';
+import 'package:flutter_finance_app_ui_animation/view/home_screen/widgets/list_view.dart';
+import 'package:flutter_finance_app_ui_animation/view/home_screen/widgets/swiper.dart';
 import 'package:flutter_finance_app_ui_animation/view_model/animations/fade_animation.dart';
 
 /// The main home page widget for the finance app.
@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: width * 0.02,
+                      width: width * 0.01,
                     ),
                     const Text(
                       'Welcome back',
