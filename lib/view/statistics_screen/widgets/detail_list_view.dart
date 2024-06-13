@@ -13,7 +13,7 @@ class DetailListView extends StatefulWidget {
 
 class _DetailListViewState extends State<DetailListView> {
   List<Color> colours = [
-    Colors.red.shade200,
+    Colors.blue.shade200,
     Colors.green.shade200,
     Colors.yellow.shade200,
     Colors.deepOrange.shade200,
@@ -72,14 +72,14 @@ class _DetailListViewState extends State<DetailListView> {
                     ),
                     title: Text(
                       contact.shopingPlaceName,
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(contact.dateAndTime),
                     trailing: Text(
                       contact.amountExpenses.toString(),
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                   ),
                 )),
