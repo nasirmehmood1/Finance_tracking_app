@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   card_swiper: ^3.0.1
   fl_chart:
+  flutter_card_swiper: ^7.0.1
 
 
 dev_dependencies:

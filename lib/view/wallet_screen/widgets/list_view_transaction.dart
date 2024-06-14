@@ -48,7 +48,7 @@ class _ListViewTransactionState extends State<ListViewTransaction> {
           final contact = listModel[index];
           return FadeAnimation(
             delay: 2.0 + index,
-            fadeInDirection: FadeInDirection.ltr,
+            fadeInDirection: FadeInDirection.btt,
             fadeOffset: 40,
             child: Container(
               height: height * 0.2,

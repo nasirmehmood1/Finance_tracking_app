@@ -55,7 +55,7 @@ class _FadeAnimationState extends State<FadeAnimation>
 
     // Initialize the opacity animation from transparent to fully opaque.
     opacityAnimation =
-        Tween<double>(begin: 0, end: 1).animate(animationController)
+        Tween<double>(begin: 0.5, end: 1).animate(animationController)
           ..addListener(
             () {
               setState(() {});

@@ -1,13 +1,25 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+/// A StatefulWidget that displays a custom pie chart.
 class PieChartCustom extends StatefulWidget {
-  const PieChartCustom({super.key});
-
+  const PieChartCustom(
+      {super.key,
+      required this.pieValue,
+      required this.houseExpenses,
+      required this.foodExpenses,
+      required this.treveleExpenses,
+      required this.luxuryExpense});
+  final String pieValue;
+  final double houseExpenses;
+  final double foodExpenses;
+  final double treveleExpenses;
+  final double luxuryExpense;
   @override
   State<PieChartCustom> createState() => _PieChartCustomState();
 }
 
+/// The State class for PieChartCustom.
 class _PieChartCustomState extends State<PieChartCustom> {
   int? touchedIndex;
 
@@ -36,9 +48,9 @@ class _PieChartCustomState extends State<PieChartCustom> {
               ),
             ),
           ),
-          const Text(
-            '\$3310.43',
-            style: TextStyle(
+          Text(
+            widget.pieValue,
+            style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
@@ -48,6 +60,7 @@ class _PieChartCustomState extends State<PieChartCustom> {
     );
   }
 
+  /// Generates a list of PieChartSectionData to display sections of the pie chart.
   List<PieChartSectionData> _showingSections() {
     return List.generate(4, (i) {
       final bool isTouched = i == touchedIndex;
@@ -58,45 +71,45 @@ class _PieChartCustomState extends State<PieChartCustom> {
         case 0:
           return PieChartSectionData(
             color: Colors.blue,
-            value: 40,
+            value: widget.foodExpenses,
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
           );
         case 1:
           return PieChartSectionData(
             color: Colors.green,
-            value: 30,
+            value: widget.houseExpenses,
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
           );
         case 2:
           return PieChartSectionData(
             color: Colors.yellow,
-            value: 20,
+            value: widget.treveleExpenses,
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
           );
         case 3:
           return PieChartSectionData(
             color: Colors.orange,
-            value: 10,
+            value: widget.luxuryExpense,
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
           );
         default:

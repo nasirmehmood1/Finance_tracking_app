@@ -5,13 +5,16 @@ import 'package:flutter_finance_app_ui_animation/view/wallet_screen/widgets/seco
 import 'package:flutter_finance_app_ui_animation/view/wallet_screen/widgets/wallet_card.dart';
 import 'package:flutter_finance_app_ui_animation/view_model/animations/fade_animation.dart';
 
+/// A StatelessWidget that represents the Wallet screen UI.
 class WalletScreen extends StatelessWidget {
   const WalletScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Getting device screen dimensions
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
     return Container(
       height: height,
       width: width,
@@ -20,32 +23,27 @@ class WalletScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         children: [
           const FadeAnimation(
-              delay: 2,
-              fadeInDirection: FadeInDirection.ltr,
-              fadeOffset: 40,
-              child: WalletCard()),
-          SizedBox(
-            height: height * 0.02,
+            delay: 2,
+            fadeInDirection: FadeInDirection.ltr,
+            fadeOffset: 40,
+            child: WalletCard(),
           ),
+          SizedBox(height: height * 0.02),
           FadeAnimation(
             delay: 4,
             fadeInDirection: FadeInDirection.ltr,
             fadeOffset: 40,
             child: Row(
               children: [
-                SizedBox(
-                  width: width * 0.06,
-                ),
+                SizedBox(width: width * 0.06),
                 const Text(
                   'Recent Activities',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                )
+                ),
               ],
             ),
           ),
-          SizedBox(
-            height: height * 0.01,
-          ),
+          SizedBox(height: height * 0.01),
           const Row(
             children: [
               FadeAnimation(
@@ -53,15 +51,19 @@ class WalletScreen extends StatelessWidget {
                 fadeInDirection: FadeInDirection.ltr,
                 fadeOffset: 40,
                 child: SecondaryCards(
-                    amountText: '908765.09', descriptionText: 'Net Income'),
+                  amountText: '908765.09',
+                  descriptionText: 'Net Income',
+                ),
               ),
               FadeAnimation(
                 delay: 5,
                 fadeInDirection: FadeInDirection.ltr,
                 fadeOffset: 40,
                 child: SecondaryCards(
-                    amountText: '65430.0', descriptionText: 'Total Expenses'),
-              )
+                  amountText: '65430.0',
+                  descriptionText: 'Total Expenses',
+                ),
+              ),
             ],
           ),
           FadeAnimation(
@@ -70,9 +72,7 @@ class WalletScreen extends StatelessWidget {
             fadeOffset: 40,
             child: Row(
               children: [
-                SizedBox(
-                  width: width * 0.06,
-                ),
+                SizedBox(width: width * 0.06),
                 const Text(
                   'Recent Transactions',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -80,12 +80,10 @@ class WalletScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: height * 0.02,
-          ),
+          SizedBox(height: height * 0.02),
           const Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: const ListViewTransaction(),
+            padding: EdgeInsets.only(left: 20),
+            child: ListViewTransaction(),
           ),
         ],
       ),

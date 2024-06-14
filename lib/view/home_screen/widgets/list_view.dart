@@ -98,7 +98,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
           final contact = contactsList[index];
           return FadeAnimation(
             delay: 2.0 + index,
-            fadeInDirection: FadeInDirection.ltr,
+            fadeInDirection: FadeInDirection.btt,
             fadeOffset: 40,
             child: Container(
               height: height * 0.2,

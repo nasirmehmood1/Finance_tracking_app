@@ -26,7 +26,7 @@ class BankCard extends StatelessWidget {
     return Material(
       child: Container(
         height: height *
-            0.3, // Set the height of the card to 30% of the screen height.
+            0.23, // Set the height of the card to 30% of the screen height.
         width: width, // Set the width of the card to the full screen width.
         padding: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
@@ -44,16 +44,16 @@ class BankCard extends StatelessWidget {
             Text(
               'Visa',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 35,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(height: 60),
             Text(
-              'Total balance',
+              'Balance',
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),

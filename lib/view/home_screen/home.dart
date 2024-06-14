@@ -90,12 +90,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: height * 0.05,
               ),
               // Home buttons row with fade animation.
-              FadeAnimation(
-                delay: 3.5,
-                fadeInDirection: FadeInDirection.ltr,
-                fadeOffset: 40,
-                child: _buildHomeButtons(),
-              ),
+
+              _buildHomeButtons(),
+
               SizedBox(
                 height: height * 0.02,
               ),
@@ -117,35 +114,49 @@ Row _buildHomeButtons() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      HomeButton(
-        label: "Transfer",
-        iconData: Icons.transfer_within_a_station,
-        color: Colors.teal,
-        onPressed: () {},
+      FadeAnimation(
+        delay: 2.5,
+        fadeInDirection: FadeInDirection.ltr,
+        fadeOffset: 40,
+        child: HomeButton(
+          label: "Transfer",
+          iconData: Icons.transfer_within_a_station,
+          color: Colors.teal,
+          onPressed: () {},
+        ),
       ),
-      HomeButton(
-        label: "Voucher",
-        iconData: Icons.dark_mode,
-        color: Colors.orange,
-        onPressed: () {},
+      FadeAnimation(
+        delay: 3,
+        fadeInDirection: FadeInDirection.ltr,
+        fadeOffset: 40,
+        child: HomeButton(
+          label: "Voucher",
+          iconData: Icons.dark_mode,
+          color: Colors.orange,
+          onPressed: () {},
+        ),
       ),
-      HomeButton(
-        label: "Bill",
-        iconData: Icons.payment_outlined,
-        color: Colors.purpleAccent.shade100,
-        onPressed: () {},
+      FadeAnimation(
+        delay: 3.5,
+        fadeInDirection: FadeInDirection.ltr,
+        fadeOffset: 40,
+        child: HomeButton(
+          label: "Bill",
+          iconData: Icons.payment_outlined,
+          color: Colors.purpleAccent.shade100,
+          onPressed: () {},
+        ),
       ),
-      HomeButton(
-        label: "Send",
-        iconData: Icons.send,
-        color: Colors.teal,
-        onPressed: () {},
-      ),
-      HomeButton(
-        label: "More",
-        iconData: Icons.more_vert,
-        color: Colors.red,
-        onPressed: () {},
+      FadeAnimation(
+        delay: 4,
+        fadeInDirection: FadeInDirection.ltr,
+        fadeOffset: 40,
+        child: HomeButton(
+          label: "Send",
+          iconData: Icons.send,
+          color: Colors.teal,
+          onPressed: () {},
+        ),
       ),
     ],
   );
