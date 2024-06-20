@@ -2,6 +2,7 @@ import 'dart:ui' show ImageFilter;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_finance_app_ui_animation/view/home_screen/home.dart';
+import 'package:flutter_finance_app_ui_animation/view/introduction_screen/welcom_screen.dart';
 import 'package:flutter_finance_app_ui_animation/view/landing_widget.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LandingWidget(),
+      home: const WelcomScreen(),
     );
   }
 }

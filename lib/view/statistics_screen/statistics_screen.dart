@@ -15,7 +15,7 @@ class StatisticsPage extends StatefulWidget {
 class _StatisticsPageState extends State<StatisticsPage> {
   /// Represents the currently selected period ('Week', 'Month', 'Year').
   String selectedPeriod = 'Week';
-  String amount = '3310.43';
+  String amount = '₤3310.43';
   double food = 203.8;
   double house = 1000;
   double trevel = 800;
