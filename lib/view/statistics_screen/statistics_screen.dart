@@ -58,6 +58,23 @@ class _StatisticsPageState extends State<StatisticsPage> {
             ),
             const SizedBox(height: 35.0),
             // Detail list view for displaying financial details
+            FadeAnimation(
+              delay: 5,
+              fadeInDirection: FadeInDirection.ltr,
+              fadeOffset: 40,
+              child: Row(
+                children: [
+                  SizedBox(width: width * 0.06),
+                  const Text(
+                    'Monthly Expenses',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: height * 0.01,
+            ),
             const DetailListView(),
           ],
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_finance_app_ui_animation/view/introduction_screen/onboard_screen.dart';
-import 'package:flutter_finance_app_ui_animation/view/landing_widget.dart';
+import 'package:flutter_finance_app_ui_animation/view/landing_screen/landing_widget.dart';
 
 class WelcomScreen extends StatelessWidget {
   const WelcomScreen({super.key});

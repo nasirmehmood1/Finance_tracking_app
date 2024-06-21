@@ -92,7 +92,26 @@ class _MyHomePageState extends State<MyHomePage> {
               // Home buttons row with fade animation.
 
               _buildHomeButtons(),
-
+              SizedBox(
+                height: height * 0.02,
+              ),
+              FadeAnimation(
+                delay: 3,
+                fadeInDirection: FadeInDirection.ltr,
+                fadeOffset: 40,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: width * 0.01,
+                    ),
+                    const Text(
+                      'Recent Transations',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
               SizedBox(
                 height: height * 0.02,
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_finance_app_ui_animation/view/landing_widget.dart';
+import 'package:flutter_finance_app_ui_animation/view/landing_screen/landing_widget.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

@@ -74,7 +74,7 @@ class WalletScreen extends StatelessWidget {
               children: [
                 SizedBox(width: width * 0.06),
                 const Text(
-                  'Recent Transactions',
+                  'Yearly Expenses',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ],
